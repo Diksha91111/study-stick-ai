@@ -1,0 +1,12 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const timetableController_js_1 = require("../controllers/timetableController.js");
+const auth_js_1 = require("../middleware/auth.js");
+const router = (0, express_1.Router)();
+router.use(auth_js_1.authenticateToken);
+router.get('/', timetableController_js_1.getSlots);
+router.post('/', timetableController_js_1.createSlot);
+router.put('/:id', timetableController_js_1.updateSlot);
+router.delete('/:id', timetableController_js_1.deleteSlot);
+exports.default = router;

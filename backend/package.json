@@ -1,0 +1,53 @@
+{
+  "name": "studystick-ai-backend",
+  "version": "1.0.0",
+  "description": "Study Stick AI Backend - Phase 1 Authentication & Academic Planning",
+  "main": "dist/server.js",
+  "scripts": {
+    "dev": "tsx watch src/server.ts",
+    "build": "tsc",
+    "start": "node dist/server.js",
+    "test:phase1": "tsx src/tests/test_phase1.ts",
+    "test:ai": "tsx src/tests/test_ai.ts",
+    "test:assistant": "tsx src/tests/test_ai_assistant_e2e.ts",
+    "test:execution": "tsx src/tests/test_code_execution.ts",
+    "test:progress": "tsx src/tests/test_progress_tracker.ts",
+    "test:learning-path": "tsx src/tests/test_learning_path.ts",
+    "test:progression": "tsx src/tests/test_learning_path_progression.ts",
+    "test:behavior": "tsx src/tests/test_behavioral_verification.ts",
+    "test:flashcards": "tsx src/tests/test_flashcard_engine.ts",
+    "test:notifications": "tsx src/tests/test_notifications_system.ts",
+    "test:multimodal": "tsx src/tests/test_multimodal_resources.ts",
+    "seed": "tsx src/utils/seedDemo.ts"
+  },
+  "dependencies": {
+    "@types/nodemailer": "^8.0.2",
+    "adm-zip": "^0.6.1",
+    "bcryptjs": "^3.0.2",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.9.5",
+    "multer": "^2.4.0",
+    "nodemailer": "^10.0.10",
+    "pdf-parse": "^2.4.5",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@types/adm-zip": "^0.5.8",
+    "@types/bcryptjs": "^2.4.6",
+    "@types/cookie-parser": "^1.4.8",
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "@types/jsonwebtoken": "^9.0.8",
+    "@types/multer": "^2.3.0",
+    "@types/node": "^22.10.7",
+    "@types/pdf-parse": "^1.1.5",
+    "@types/supertest": "^7.2.1",
+    "supertest": "^7.3.1",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.3"
+  }
+}

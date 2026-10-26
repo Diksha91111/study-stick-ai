@@ -1,0 +1,12 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const examController_js_1 = require("../controllers/examController.js");
+const auth_js_1 = require("../middleware/auth.js");
+const router = (0, express_1.Router)();
+router.use(auth_js_1.authenticateToken);
+router.get('/', examController_js_1.getExams);
+router.post('/', examController_js_1.createExam);
+router.put('/:id', examController_js_1.updateExam);
+router.delete('/:id', examController_js_1.deleteExam);
+exports.default = router;

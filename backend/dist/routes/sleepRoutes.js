@@ -1,0 +1,11 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const sleepController_js_1 = require("../controllers/sleepController.js");
+const auth_js_1 = require("../middleware/auth.js");
+const router = (0, express_1.Router)();
+router.use(auth_js_1.authenticateToken);
+router.get('/', sleepController_js_1.getSleepSchedule);
+router.put('/', sleepController_js_1.updateSleepSchedule);
+router.get('/conflicts', sleepController_js_1.getSleepConflicts);
+exports.default = router;

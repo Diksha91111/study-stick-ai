@@ -1,0 +1,56 @@
+﻿
+ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ
+  STUDY STICK AI ΓÇö REAL GEMINI API INTEGRATION TEST
+ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ
+
+  GEMINI_API_KEY loaded : YES [AQ.Ab8ΓÇªZvhQ]
+
+[1] Provider Configuration
+  Γ£à PASSED  GeminiProvider.isConfigured() ΓÇö Returns true when key is set
+
+[2] ModelRouter routing for all 10 coding task types
+  Γ£à PASSED  route(codeExplanation) ΓÇö ΓåÆ gemini as expected
+  Γ£à PASSED  route(codeFix) ΓÇö ΓåÆ gemini as expected
+  Γ£à PASSED  route(codeDebug) ΓÇö ΓåÆ gemini as expected
+  Γ£à PASSED  route(codeGeneration) ΓÇö ΓåÆ gemini as expected
+  Γ£à PASSED  route(codeRefactor) ΓÇö ΓåÆ gemini as expected
+  Γ£à PASSED  route(codeOptimize) ΓÇö ΓåÆ gemini as expected
+  Γ£à PASSED  route(codeTestGen) ΓÇö ΓåÆ gemini as expected
+  Γ£à PASSED  route(codeConvert) ΓÇö ΓåÆ gemini as expected
+  Γ£à PASSED  route(codeComments) ΓÇö ΓåÆ gemini as expected
+  Γ£à PASSED  route(codeReview) ΓÇö ΓåÆ gemini as expected
+
+[3] API key exposure check
+  Γ£à PASSED  API key not in prompt templates ΓÇö Prompt instructions exclude GEMINI_API_KEY
+
+[4] Real Gemini API call ΓÇö action: explain (codeExplanation)
+  Γ¥î FAILED  Real API call: explain ΓÇö [GeminiProvider] Execution failed: Gemini API error (404): models/gemini-1.5-pro is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.
+
+[5] Real Gemini API call ΓÇö action: fix (codeFix)
+  Γ¥î FAILED  Real API call: fix ΓÇö [GeminiProvider] Execution failed: Gemini API error (404): models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.
+
+ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ
+  REAL GEMINI INTEGRATION TEST ΓÇö SUMMARY
+ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ
+  TOTAL   : 14
+  PASSED  : 12
+  FAILED  : 2
+  BLOCKED : 0
+ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+  Γ£à [PASSED ] GeminiProvider.isConfigured()
+  Γ£à [PASSED ] route(codeExplanation)
+  Γ£à [PASSED ] route(codeFix)
+  Γ£à [PASSED ] route(codeDebug)
+  Γ£à [PASSED ] route(codeGeneration)
+  Γ£à [PASSED ] route(codeRefactor)
+  Γ£à [PASSED ] route(codeOptimize)
+  Γ£à [PASSED ] route(codeTestGen)
+  Γ£à [PASSED ] route(codeConvert)
+  Γ£à [PASSED ] route(codeComments)
+  Γ£à [PASSED ] route(codeReview)
+  Γ£à [PASSED ] API key not in prompt templates
+  Γ¥î [FAILED ] Real API call: explain
+  Γ¥î [FAILED ] Real API call: fix
+
+  Γ¥î Some tests FAILED ΓÇö investigate above.
+

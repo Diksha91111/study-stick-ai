@@ -1,0 +1,1 @@
+import mongoose from 'mongoose'; mongoose.connect('mongodb://127.0.0.1:27017/studystick_ai').then(async () => { await mongoose.connection.db.collection('users').updateOne({email: 'test1@test.com'}, {$set: {isEmailVerified: true}}); process.exit(0); });
